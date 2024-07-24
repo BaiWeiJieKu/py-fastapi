@@ -2569,3 +2569,49 @@ FileNotFoundError: [Errno 2] No such file or directory: '../static/videos/6d8b17
 2024-07-24 14:59:07,300 - uvicorn.error - INFO - Application shutdown complete.
 2024-07-24 14:59:07,300 - uvicorn.error - INFO - Finished server process [13452]
 2024-07-24 14:59:07,495 - uvicorn.error - INFO - Stopping reloader process [13441]
+2024-07-24 15:35:01,910 - uvicorn.error - INFO - Will watch for changes in these directories: ['/Users/pingguo/秦奋/Python项目/py-fastapi']
+2024-07-24 15:35:01,911 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2024-07-24 15:35:01,912 - uvicorn.error - INFO - Started reloader process [15599] using StatReload
+2024-07-24 15:35:03,090 - uvicorn.error - INFO - Started server process [15607]
+2024-07-24 15:35:03,091 - uvicorn.error - INFO - Waiting for application startup.
+2024-07-24 15:35:03,092 - uvicorn.error - INFO - Application startup complete.
+2024-07-24 15:35:05,047 - uvicorn.access - INFO - 127.0.0.1:54437 - "GET /static/html/imageToVideo.html HTTP/1.1" 304
+2024-07-24 15:35:25,088 - uvicorn.access - INFO - 127.0.0.1:54438 - "POST /iv/upload HTTP/1.1" 200
+2024-07-24 15:35:26,102 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:27,097 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:28,097 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:29,096 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:30,096 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:31,097 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:32,096 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:33,594 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:34,594 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:35,594 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:36,594 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:37,595 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:38,594 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:39,606 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:40,597 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:41,595 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:42,596 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:43,595 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:44,098 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:45,096 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:46,098 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:47,593 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:48,595 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:49,596 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:50,595 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:51,703 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:52,096 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:53,159 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:54,098 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:55,098 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:56,099 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:57,097 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/progress/fd1742ad-b425-469f-84ae-f32ed48b640f HTTP/1.1" 200
+2024-07-24 15:35:57,108 - uvicorn.access - INFO - 127.0.0.1:54438 - "GET /iv/video?video_url=/Users/pingguo/%E7%A7%A6%E5%A5%8B/Python%E9%A1%B9%E7%9B%AE/py-fastapi/static/videos/fd1742ad-b425-469f-84ae-f32ed48b640f.mp4 HTTP/1.1" 200
+2024-07-24 15:36:24,265 - uvicorn.error - INFO - Shutting down
+2024-07-24 15:36:24,367 - uvicorn.error - INFO - Waiting for application shutdown.
+2024-07-24 15:36:24,368 - uvicorn.error - INFO - Application shutdown complete.
+2024-07-24 15:36:24,368 - uvicorn.error - INFO - Finished server process [15607]
+2024-07-24 15:36:24,997 - uvicorn.error - INFO - Stopping reloader process [15599]
