@@ -51,7 +51,7 @@ The system must handle the constraints of limited memory and simulate an artific
 ## Test image
 
 begin
-![image begin](./static/image/111.jpg)
+![image begin](./static/image/111.png)
 
 finish
-![image finish](./static/image/222.jpg)
+![image finish](./static/image/222.png)
