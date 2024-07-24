@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Upload and Table Display</title>
+    <style>
+        video::-webkit-media-controls-download-button {
+            display: none !important;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .upload-section {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #f3f3f3;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-inner {
+            height: 100%;
+            background-color: blue;
+            color: brown;
+        }
+
+    </style>
+</head>
+<body>
+<div class="upload-section">
+    <h2>Image translate to video</h2>
+    <input type="file" id="imageFile">
+    <input type="text" id="imageUrl" placeholder="Enter image URL">
+    <button onclick="uploadImage()">Upload</button>
+</div>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>progress</th>
+        <th>URL</th>
+    </tr>
+    </thead>
+    <tbody id="tableBody">
+    </tbody>
+</table>
+
+<script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    let progressIntervals = {};
+
+    function uploadImage() {
+        const imageUrlInput = document.getElementById('imageUrl');
+        const imageFileInput = document.getElementById('imageFile');
+        let imageUrl = imageUrlInput.value.trim();
+        let formData = new FormData();
+
+
+        if (imageFileInput.files.length > 0) {
+            formData.append('file', imageFileInput.files[0]);
+        } else if (imageUrl !== '') {
+            formData.append('url', imageUrl);
+        } else {
+            alert('Please provide an image or a URL.');
+            return;
+        }
+
+        fetch('http://127.0.0.1:8000/iv/upload', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                appendDataToTable(data);
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    function appendDataToTable(data) {
+        const tableBody = document.getElementById('tableBody');
+        const newRow = tableBody.insertRow();
+        const idCell = newRow.insertCell(0);
+        const progressCell = newRow.insertCell(1);
+        const urlCell = newRow.insertCell(2);
+
+        idCell.textContent = data.task_id;
+
+        const progressBar = document.createElement('div');
+        progressBar.className = 'progress-bar';
+        progressCell.appendChild(progressBar);
+        const progressInner = document.createElement('div');
+        progressInner.className = 'progress-inner';
+        progressBar.appendChild(progressInner);
+
+        urlCell.innerHTML = '<video id="myVideo" controls controlsList="nodownload" width="640" height="360"><source src="" type="video/mp4"></video>';
+        const videoElement = urlCell.querySelector('video');
+
+        progressIntervals[data.task_id] = setInterval(() => {
+            fetchProgress(data.task_id, data.url, progressInner, videoElement);
+        }, 1000);
+    }
+
+    function fetchProgress(taskId, url, progressElement, videoElement) {
+        fetch(`http://127.0.0.1:8000/iv/progress/${taskId}`, {
+            method: 'GET'
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                progressElement.style.width = `${data.progress}%`;
+                progressElement.textContent = `${data.progress}%`;
+                if (data.progress === 100) {
+                    clearInterval(progressIntervals[taskId]);
+                    videoElement.src = '/iv/video?video_url=' + url; // 直接设置video元素的src属性
+                    console.log(videoElement)
+                    videoElement.load(); // 触发video元素的重载
+
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+
+    window.addEventListener('unload', () => {
+        for (let interval of Object.values(progressIntervals)) {
+            clearInterval(interval);
+        }
+    });
+</script>
+</body>
+</html>
